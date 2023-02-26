@@ -8,9 +8,13 @@ const popupInfo = document.querySelector('.popup-info');
 const acceptPopupBtn = document.querySelector('.accept');
 const cancelPopupBtn = document.querySelector('.cancel');
 
+let id = 0
+let editedTodo
+
 const createNewTask = () => {
 	const newLi = document.createElement('li');
 	const liText = document.createElement('span');
+	newLi.setAttribute('id',id)
 	newLi.innerHTML = `
     <div class="tools">
 	<button class="complete"><i class="fas fa-check"></i></button>
@@ -20,6 +24,8 @@ const createNewTask = () => {
 	liText.textContent = todoInput.value;
 	taskArea.append(newLi);
 	newLi.prepend(liText);
+
+	id++
 };
 
 const addTodo = () => {
@@ -48,13 +54,16 @@ const completeTodo = e => {
 };
 
 const editTodo = e => {
-	let currentTodo = e.target.closest('li').firstChild;
+	let currentTodo = e.target.closest('li').id;
+    editedTodo = document.getElementById(currentTodo);
+
+	console.log(editedTodo);
 	popup.style.display = 'flex';
-	popupInput.value = currentTodo.textContent;
+	popupInput.value = editedTodo.firstChild.textContent;
 
 	acceptPopupBtn.addEventListener('click', () => {
 		if (popupInput.value !== '') {
-			currentTodo.textContent = popupInput.value;
+			editedTodo.firstChild.textContent = popupInput.value;
 			popup.style.display = 'none';
 			popupInfo.textContent = '';
 
