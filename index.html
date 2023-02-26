@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/498d7c2198.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="todo">
+        <div class="header">
+            <h1>ToDo List</h1>
+            <input type="text" class="todo-input" placeholder="type task content...">
+            <button class="add-btn">Add</button>
+        </div>
+
+        <div class="todo-list">
+
+            <h3>Task list:</h3>
+            <p class="alert-info">No tasks on the list.</p>
+
+            <ul class="task-area">
+                <!-- <li id="test1">Smoke a cigar
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button> <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li id="test2">Clean a window
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li id="test3">Drink a tea
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li> -->
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="popup">
+        <h3>Edit task:</h3>
+        <div class="popup-body">
+            <p class="popup-info"></p>
+            <input type="text" class="popup-input" placeholder="Enter new content of task">
+            <button class="popup-btn accept">Accept</button>
+            <button class="popup-btn cancel">cancel</button>
+        </div>
+    </div>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
