@@ -1,4 +1,4 @@
-# TodoList
+# TodoList - Course project 
 [<img src="https://cdn.discordapp.com/attachments/1107360185594413116/1107413347835596910/image.png" alt="
 Todolist project screenshot photo" width="100%"/>](https://czekol.github.io/todoList/)
 <p align="center">
